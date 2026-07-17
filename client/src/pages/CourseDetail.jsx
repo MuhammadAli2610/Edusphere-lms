@@ -155,7 +155,8 @@ export default function CourseDetail() {
               )}
 
               {lesson.pdfUrl && (
-                <a href={`${import.meta.env.VITE_API_URL}${lesson.pdfUrl}`}
+                <a href={lesson.pdfUrl}
+
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 text-xs font-medium"

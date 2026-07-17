@@ -17,7 +17,7 @@ const createLesson = async (req, res, next) => {
     };
 
     if (req.file) {
-      lessonData.pdfUrl = `/uploads/pdfs/${req.file.filename}`;
+      lessonData.pdfUrl = req.file.path; // Cloudinary gives back a full URL here
     }
 
     const lesson = await Lesson.create(lessonData);
